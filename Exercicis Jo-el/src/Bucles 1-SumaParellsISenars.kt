@@ -12,9 +12,9 @@ format:
 
 
 1. Declarar Scanner
-2. Crear la variable de l'entrada de l'usuari y el valor del total de numeros introduits.
-3. Crear el bucle i anar sumant o restatnt el total de numeros positius o negatius.
-4. Crear les condicions per a cada sortida.
+2. Crear les variables per comptar parells, senars i per registrar les entrades que introduira l'usuari.
+3. Crear el bucle i anar sumant o restant el total de numeros parells i senars.
+4. Mostrar la sortida amb el total de resultats.
  */
 
 import java.util.Scanner
@@ -22,22 +22,25 @@ import java.util.Scanner
 fun main() {
     // Declarar scanner
     val scan = Scanner(System.`in`)
-    // Crear la variable de l'entrada de l'usuari y el valor del total de numeros introduits.
-    var entrada = 0
-    var numerousuari = scan.nextInt()
-    // Crear el bucle i anar sumant o restatnt el total de numeros positius o negatius.
-    while (numerousuari != 0) {
-        if (numerousuari > 0)
-            entrada += 1
-        else entrada -= 1
-        numerousuari = scan.nextInt()
+    // Crear les variables per comptar parells, senars i per registrar les entrades que introduira l'usuari.
+    var parell = 0
+    var senar = 0
+    var entrades = scan.nextInt()
+    // Crear el bucle i anar sumant o restant el total de numeros parells i senars.
+    while (entrades  > 0) {
+        entrades -= 1
+        val numerousuari = scan.nextInt()
+        val numeros = 1..numerousuari
+        for (numero in numeros) {
+            if (numero % 2 == 0) {
+                parell += numero
+            } else {
+                senar += numero
+            }
+        }
+        // Mostrar la sortida amb el total de resultats.
+        println("PARELLS: $parell SENARS: $senar")
+        parell = 0
+        senar = 0
     }
-    // Crear les condicions per a cada sortida.
-    if (entrada > 0) {
-        println("POSITIUS")
-    }
-    else if (entrada < 0) {
-        println("NEGATIUS")
-    }
-    else (println("IGUALS"))
 }
