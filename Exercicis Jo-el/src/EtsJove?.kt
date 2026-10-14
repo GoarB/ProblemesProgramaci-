@@ -11,5 +11,5 @@ fun main() {
     if (edat < 32)
         println("SI")
     else if (edat >= 32)
-    println("NO")
+        println("NO")
 }

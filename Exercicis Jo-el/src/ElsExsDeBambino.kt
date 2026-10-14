@@ -17,11 +17,11 @@ fun main() {
     val novio = scan.nextInt()
     val EDATMIN = 18
     // Crear condicional i mostrar el resultat
-    if (ex1 >= EDATMIN && ex2 != ex1   && ex3 != ex2 && ex3 != ex1 && novio != ex1 && novio != ex2 && novio != ex3
-        && novio >= EDATMIN) {
+    if (ex1 >= EDATMIN && ex2 != ex1 && ex3 != ex2 && ex3 != ex1 && novio != ex1 && novio != ex2 && novio != ex3
+        && novio >= EDATMIN
+    ) {
         println("SI")
-    }
-    else {
+    } else {
         println("NO")
     }
 }

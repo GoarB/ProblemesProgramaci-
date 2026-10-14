@@ -8,6 +8,5 @@ fun main() {
     // 2. Crear la condicional e impirmir la resposta en funcio del numero donat
     if (num % 5 == 0 && num % 8 == 0 && num % 9 == 0 && num % 7 == 0) {
         print("SI")
-    }
-        else  print("NO")
+    } else print("NO")
 }

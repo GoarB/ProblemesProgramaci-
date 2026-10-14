@@ -27,7 +27,7 @@ fun main() {
     var senar = 0
     var entrades = scan.nextInt()
     // Crear el bucle i anar sumant o restant el total de numeros parells i senars.
-    while (entrades  > 0) {
+    while (entrades > 0) {
         entrades -= 1
         val numerousuari = scan.nextInt()
         val numeros = 1..numerousuari

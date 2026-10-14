@@ -15,8 +15,7 @@ fun main() {
 // Declarar condicional i mostrar el resultat
     if (C1 == C2 && C2 == C3) {
         println("SI")
-    }
-    else {
-            println("NO")
+    } else {
+        println("NO")
     }
 }

@@ -19,9 +19,9 @@ fun main() {
     // Declarar scanner
     val scan = Scanner(System.`in`)
     // Crear la variable de la quantitat de números que s'introduiran.
-    var numentrades : Int = scan.nextInt()
+    var numentrades: Int = scan.nextInt()
     // Crear el bucle per el cual cada numero que introdueix l'usuari se li sumi 1 i mostrar el resultat.
-    while (numentrades > 0){
+    while (numentrades > 0) {
         val entrada = scan.nextInt()
         println(entrada + 1)
         numentrades -= 1

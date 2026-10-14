@@ -8,18 +8,17 @@
 // 3. Crear les variables que indiquin el moment del dia en el que estem en base als segons.
 fun main() {
     // 1. Crear la variable del moment del dia
-    val MitgDia : Int = 43200
+    val MitgDia: Int = 43200
     // 2. Demanar els segons en el que estem.
-    val seg : Int = readln().toInt()
+    val seg: Int = readln().toInt()
     // 3. Crear la variable del moment
     val moment = seg / MitgDia
     // 4. Crear la variable del dia
-    val dia = (moment/2)+1
+    val dia = (moment / 2) + 1
     // 5. Crear les condicions per mostrar una o altre resposta i mostrar-la
-    if (moment%2 == 0){
+    if (moment % 2 == 0) {
         println("mati del dia $dia")
-    }
-    else if (moment % 2 != 0){
+    } else if (moment % 2 != 0) {
         println("nit del dia $dia")
     }
 }

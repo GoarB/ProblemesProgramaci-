@@ -19,24 +19,31 @@ fun main() {
         "Q" -> {
             println("Skill 1")
         }
+
         "W" -> {
             println("Skill 2")
         }
+
         "E" -> {
             println("Skill 3")
         }
+
         "R" -> {
             println("Ultimate")
         }
+
         "B" -> {
             println("Recall")
         }
+
         "D" -> {
             println("Bronzes never use summoners")
         }
+
         "F" -> {
             println("Bronzes never use summoners")
         }
+
         else -> {
             println("Error")
         }

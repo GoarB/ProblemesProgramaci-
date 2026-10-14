@@ -13,7 +13,6 @@ fun main() {
     // Crear la condició i mostrar el resultat
     if (num1 == num2 + 1 || num2 == num1 + 1) {
         println("SI")
-    }
-    else println("NO")
+    } else println("NO")
 
 }

@@ -5,6 +5,7 @@
 // 3. Llegir números d'entrada
 // 4.  Crear les condicionals
 import java.util.Scanner
+
 // Declarar les variables
 val Gen = 32
 val Feb = 60
@@ -18,6 +19,7 @@ val Sep = 274
 val Oct = 305
 val Nov = 335
 val Des = 366
+
 // Declarar scanner
 fun main() {
     val scan = Scanner(System.`in`)

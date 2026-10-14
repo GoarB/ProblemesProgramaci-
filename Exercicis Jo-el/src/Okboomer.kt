@@ -5,8 +5,8 @@
 fun main() {
 
     // 1. Demanar l'any de naixement i la variable de boomer
-val any : Int = readln().toInt()
-val boomer : IntRange = 1945..1965
+    val any: Int = readln().toInt()
+    val boomer: IntRange = 1945..1965
     // 2. Crear la condicional de ok Boomer
     if (any in boomer) {
         println("ok boomer")

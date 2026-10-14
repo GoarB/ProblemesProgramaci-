@@ -18,8 +18,8 @@ fun main() {
     } else if (jugador1 == jugador2) {
         println("EMPAT")
     } else if (jugador2 == pedra && jugador1 == tisora || jugador2 == paper && jugador1 == pedra ||
-        jugador2 == tisora && jugador1 == paper) {
+        jugador2 == tisora && jugador1 == paper
+    ) {
         println("Jugador2")
-    }
-    else (print("Jugador1"))
+    } else (print("Jugador1"))
 }

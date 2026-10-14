@@ -31,9 +31,7 @@ fun main() {
     // Crear les condicions per a cada sortida.
     if (entrada > 0) {
         println("POSITIUS")
-    }
-    else if (entrada < 0) {
+    } else if (entrada < 0) {
         println("NEGATIUS")
-    }
-    else (println("IGUALS"))
+    } else (println("IGUALS"))
 }

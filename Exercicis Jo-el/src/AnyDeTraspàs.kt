@@ -19,11 +19,9 @@ fun main() {
     val cuatrecents = num % 400
     val cent = num % 100
     // Crear les variables del resultat
-    if (cent == 0 && cuatrecents != 0 ) {
+    if (cent == 0 && cuatrecents != 0) {
         print("NO")
-    }
-    else if (cuatre == 0) {
+    } else if (cuatre == 0) {
         print("SI")
-    }
-    else (print("NO"))
+    } else (print("NO"))
 }

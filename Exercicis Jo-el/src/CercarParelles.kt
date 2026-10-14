@@ -14,8 +14,7 @@ fun main() {
     val num2 = scan.nextInt()
     val num3 = scan.nextInt()
     // Crear les condicions i mostrar el resultat
-    if (num1 == num2 || num1 == num3 || num2 == num3){
-    println("SI")
-    }
-    else println("NO")
+    if (num1 == num2 || num1 == num3 || num2 == num3) {
+        println("SI")
+    } else println("NO")
 }

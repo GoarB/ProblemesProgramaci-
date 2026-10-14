@@ -9,7 +9,7 @@ fun main() {
     // Declarar scanner
     val scan = Scanner(System.`in`)
     // Crear les variables dels examens parcials i les pràctiques.
-    val NOTA : Int = scan.nextInt()
+    val NOTA: Int = scan.nextInt()
     // Creem les variables per a cada resultat.
     val EXCELENT = 9
     val NOTABLE = 7
@@ -18,14 +18,11 @@ fun main() {
     // Crear les condicions per cada resultat i mostrar-ho.
     if (NOTA >= EXCELENT) {
         print("Excelent")
-    }
-    else if (NOTA >= NOTABLE) {
+    } else if (NOTA >= NOTABLE) {
         print("Notable")
-    }
-    else if (NOTA >= aprobat) {
+    } else if (NOTA >= aprobat) {
         print("Aprovat")
-    }
-    else if(NOTA <= SUSPES) {
+    } else if (NOTA <= SUSPES) {
         print("Suspes")
     }
 }

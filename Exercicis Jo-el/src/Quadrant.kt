@@ -15,28 +15,28 @@ fun main() {
     // Declarar scanner
     val scan = Scanner(System.`in`)
     // Crear les variables per les entrades de l'usuari i la string on guardarem la sortida.
-    val valorx : Int = scan.nextInt()
-    val valory : Int = scan.nextInt()
+    val valorx: Int = scan.nextInt()
+    val valory: Int = scan.nextInt()
     val TOTSDOS = 0
-    var resposta : String = ""
+    var resposta: String = ""
     // Crear les condicions per a cada cuadrant.
-    if (valorx >= TOTSDOS && valory >= TOTSDOS){
+    if (valorx >= TOTSDOS && valory >= TOTSDOS) {
         resposta += "1"
     }
-    if (TOTSDOS in valorx..valory){
-        if (resposta.isNotBlank()){
+    if (TOTSDOS in valorx..valory) {
+        if (resposta.isNotBlank()) {
             resposta += ","
         }
         resposta += "2"
     }
-    if (valorx <= TOTSDOS && valory <= TOTSDOS){
-        if (resposta.isNotBlank()){
+    if (valorx <= TOTSDOS && valory <= TOTSDOS) {
+        if (resposta.isNotBlank()) {
             resposta += ","
         }
         resposta += "3"
     }
-    if (TOTSDOS in valory..valorx){
-        if (resposta.isNotBlank()){
+    if (TOTSDOS in valory..valorx) {
+        if (resposta.isNotBlank()) {
             resposta += ","
         }
         resposta += "4"

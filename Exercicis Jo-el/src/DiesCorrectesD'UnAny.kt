@@ -20,13 +20,11 @@ fun main() {
     // Llegir l'entrada
     val num = scan.nextInt()
     // Crear les condicionals i mostrar les respostes en cada cas
-    if (num !in primerdia..bixest){
+    if (num !in primerdia..bixest) {
         println("Incorrecte!")
-    }
-    else if (num in primerdia..ultimdia) {
+    } else if (num in primerdia..ultimdia) {
         println("Correcte per un any no bixest!")
-    }
-    else {
+    } else {
         println("Correcte per un any bixest!")
     }
 }

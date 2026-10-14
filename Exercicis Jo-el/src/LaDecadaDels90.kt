@@ -19,16 +19,15 @@ fun main() {
     // Declarar scanner
     val scan = Scanner(System.`in`)
     // 2. Crear les variables de les franjes d'any.
-    val ANYS_POSSIBLES : IntRange = 0..10000
-    val ANYS_VALIDS : IntRange = 90..99
+    val ANYS_POSSIBLES: IntRange = 0..10000
+    val ANYS_VALIDS: IntRange = 90..99
 
     // 3. Crear les variables de l'entrada de l'usuari.
-    val numero : Int = scan.nextLine().toInt()
+    val numero: Int = scan.nextLine().toInt()
     // 4. Crear les condicions per les cuals mostrem SI o NO i mostrar el resultat.
     if (numero in ANYS_POSSIBLES) {
         if (numero % 100 in ANYS_VALIDS) {
-        println("SI")}
-        else (println("NO"))
-    }
-    else (println("Aprén a llegir!"))
+            println("SI")
+        } else (println("NO"))
+    } else (println("Aprén a llegir!"))
 }

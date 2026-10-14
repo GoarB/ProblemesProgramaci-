@@ -15,7 +15,6 @@ fun main() {
     if (num2 != 0) {
         val resultat = (num1 / num2)
         println("$resultat")
-    }
-    else println("0")
+    } else println("0")
 
 }

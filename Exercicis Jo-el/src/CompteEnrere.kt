@@ -17,9 +17,9 @@ fun main() {
     // Declarar scanner
     val scan = Scanner(System.`in`)
     // Crear la variable de la quantitat de números que s'introduiran.
-    var numentrada : Int = scan.nextInt()
+    var numentrada: Int = scan.nextInt()
     //  Crear el bucle que imprimeixi un numero menys que el bucle anterior.
-    while (numentrada >= 0){
+    while (numentrada >= 0) {
         println(numentrada)
         numentrada -= 1
     }

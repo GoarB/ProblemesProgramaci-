@@ -10,9 +10,9 @@ fun main() {
     // Declarar scanner
     val scan = Scanner(System.`in`)
 // 2. Crear les variables de la franja de hores, minuts i segons
-    val FRANJAHORES : IntRange = 0..23
-    val FRANJAMINUTS : IntRange = 0..59
-    val FRANJASEGONS : IntRange = 0..59
+    val FRANJAHORES: IntRange = 0..23
+    val FRANJAMINUTS: IntRange = 0..59
+    val FRANJASEGONS: IntRange = 0..59
 // 3. Crear les variables de les entrades del usuari
     val hores = scan.nextLine().toInt()
     val minuts = scan.nextLine().toInt()
@@ -20,7 +20,6 @@ fun main() {
 // 4. Crear les condicionals i mostrar el resultat
     if (hores in FRANJAHORES && minuts in FRANJAMINUTS && segons in FRANJASEGONS) {
         println("SI")
-    }
-    else
+    } else
         println("NO")
 }

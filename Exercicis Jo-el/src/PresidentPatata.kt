@@ -19,14 +19,14 @@ fun main() {
     val scan = Scanner(System.`in`)
     // Crear la variable dels casos de prova.
     val frase = "No ofendre al president patata"
-    var numentrades : Int = scan.nextInt()
+    var numentrades: Int = scan.nextInt()
     // Crear el bucle i mostrar la frase tantes vegades com digui l'usuari
-    repeat ( numentrades) {
+    repeat(numentrades) {
         val entrada = scan.nextInt()
         repeat(entrada) {
-        println("$frase")
-        println("")
-        numentrades -= 1
+            println("$frase")
+            println("")
+            numentrades -= 1
         }
     }
 }
