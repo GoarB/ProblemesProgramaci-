@@ -30,24 +30,28 @@ import java.util.Scanner
 fun main() {
     val scan = Scanner(System.`in`)
 // 1. Crear les vaariables per cada rang de notes posible.
+    val NOTA_MAXIMA = 10
     val EXCELENT = 9
     val NOTABLE = 7
     val BE = 6
     val SUFICIENT = 5
     val MOLTDEFICIENT = 3
 // 2. Crear les variables per la cuantitat de notes valides i per cada cualificacio.
-    var notes = 0.toDouble()
-    var mitjana : Double = 0.0
-    var excelent = 0
-    var notable = 0
-    var be = 0
-    var suficient = 0
-    var insuficient = 0
-    var moltdeficient = 0
+    var notes = 0.toFloat()
+    var mitjana = 0.toFloat()
+    var excelent = 0.toFloat()
+    var notable = 0.toFloat()
+    var be = 0.toFloat()
+    var suficient = 0.toFloat()
+    var insuficient = 0.toFloat()
+    var moltdeficient = 0.toFloat()
 // 3. Crear la variable de la primera entrada i el bucle que compti cada cas i el sumi al resultat.
     var entrada = scan.nextInt()
     while (entrada != -1) {
-        if (entrada in EXCELENT..10) {
+        if (entrada > 10) {
+            notes += 0
+        }
+        else if (entrada in EXCELENT..NOTA_MAXIMA) {
             notes++
             excelent++
             mitjana += entrada
@@ -81,5 +85,6 @@ fun main() {
 // 4. Dividir el total de notes sumades entre el total de notes correctes i mostrar el resultat.
     mitjana /= notes
 
-    println("NOTES: ${notes.toInt()} MITJANA: $mitjana E: $excelent N: $notable B: $be S: $suficient I: $insuficient MD: $moltdeficient")
+    println("NOTES: ${notes.toInt()} MITJANA: $mitjana E: ${excelent.toInt()} N: ${notable.toInt()} B: ${be.toInt()} " +
+            "S: ${suficient.toInt()} I: ${insuficient.toInt()} MD: ${moltdeficient.toInt()}")
 }
