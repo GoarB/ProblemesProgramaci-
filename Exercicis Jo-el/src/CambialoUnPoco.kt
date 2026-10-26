@@ -22,20 +22,27 @@ fun main() {
     // Obrir el bucle en funció dels casos de prova restants.
     while (casosprova > 0) {
         var casos = scan.nextInt()
+        var cambios = casos
         // Obrir un bucle dins del bucle per tal de registrar tots els numeros introduits per l'usuari en funció
         // dels casos introduits previament.
-        while (casos > 0) {
-            val entrada = IntArray(casos)
+        val entrada = IntArray(casos)
+        while (casos > 0)
             for (i in 0 until casos) {
                 entrada[i] = scan.nextInt()
                 casos--
-        }
+            }
         val p1 = scan.nextInt()
         val p2 = scan.nextInt()
-        if (entrada[i] == p1) {
-            entrada[i] == p2
+        for (i in 0 until cambios) {
+            if (entrada[i] == p1) {
+                entrada[i] = p2
+                cambios--
+            }
         }
+        repeat(entrada.size) {
+            println(entrada[it])
         }
         casosprova--
     }
+
 }
