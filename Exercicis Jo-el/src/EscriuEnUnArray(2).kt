@@ -24,16 +24,21 @@ fun main() {
 
     // Crear un array de string.
 
-    var paraules = Array<String> (tamany) {""}
+    val paraules = Array<String> (tamany) {""}
 
     // Omplir el array amb cada paraula.
 
+    scan.nextLine()
     for (i in 0 until tamany) {
         paraules[i] = scan.nextLine()
+        println(paraules[i])
     }
 
     // Registrar la posició desitjada a mostrar.
 
     val posicio = scan.nextInt()
-    
+
+    // Mostrar el array complet i el contingut de l'array a la posició indicada.
+
+    println(paraules[posicio])
 }
