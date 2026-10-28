@@ -46,10 +46,10 @@ fun main() {
 
         val entrada = IntArray(tamany)
 
-    // Omplir l'array amb cada talla de sabata
+        // Omplir l'array amb cada talla de sabata
 
         for (i in 0 until tamany) {
-        entrada[i] = scan.nextInt()
+            entrada[i] = scan.nextInt()
         }
         // Llegir l'entrada de la talla que utilitza l'usuari
 
@@ -69,5 +69,5 @@ fun main() {
             println("NO")
         }
         casos--
-}
+    }
 }
