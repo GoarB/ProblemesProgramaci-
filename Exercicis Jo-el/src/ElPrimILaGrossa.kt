@@ -24,9 +24,18 @@ de prova, caldrà respondre:
 
 Una sola línia amb un valor que indicarà el número de sol·licituds acceptades (el zero no compta)
 
-
- */
-
+1. Llegir el nombre de casos de prova.
+2. Repetir el procés per cada cas.
+3. Llegir l'import total disponible.
+4. Crear un array per guardar les sol·licituds.
+5. Llegir les sol·licituds fins a trobar un zero.
+6. Ordenar les sol·licituds de menor a major.
+7. Inicialitzar l'import gastat i el comptador.
+8. Recórrer les sol·licituds ordenades.
+9. Comprovar si es pot acceptar cada sol·licitud.
+10. Actualitzar l'import gastat i les sol·licituds acceptades.
+11. Mostrar el nombre de sol·licituds acceptades.
+*/
 
 import java.util.Scanner
 
@@ -34,16 +43,62 @@ fun main() {
 
     val scan = Scanner(System.`in`)
 
-    // Llegir el numero de casos de prova.
+    val MAX_SOLLICITUDS = 100
 
-    var casosprova = scan.nextInt()
+    // 1. Llegir el nombre de casos de prova.
+    val nombrecasos = scan.nextInt()
 
-    // Obrir el bucle en funció dels casos de prova restants.
+    // 2. Repetir el procés per cada cas.
+    for (casactual in 1..nombrecasos) {
 
-    while (casosprova > 0) {
+        // 3. Llegir l'import total disponible.
+        val importdisponible = scan.nextInt()
 
-        val import = scan.nextInt()
+        // 4. Crear un array per guardar les sol·licituds.
+        val sollicituds = Array(MAX_SOLLICITUDS) { 0 }
+        var quantitatsollicituds = 0
 
+        // 5. Llegir les sol·licituds fins a trobar un zero.
+        var sollicitud = scan.nextInt()
+
+        while (sollicitud != 0) {
+            sollicituds[quantitatsollicituds] = sollicitud
+            quantitatsollicituds++
+
+            sollicitud = scan.nextInt()
+        }
+
+        // 6. Ordenar les sol·licituds de menor a major.
+        for (index in 0 until quantitatsollicituds) {
+
+            for (seguent in index + 1 until quantitatsollicituds) {
+
+                if (sollicituds[index] > sollicituds[seguent]) {
+
+                    val auxiliar = sollicituds[index]
+                    sollicituds[index] = sollicituds[seguent]
+                    sollicituds[seguent] = auxiliar
+                }
+            }
+        }
+
+        // 7. Inicialitzar l'import gastat i el comptador.
+        var importgastat = 0
+        var sollicitudsacceptades = 0
+
+        // 8. Recórrer les sol·licituds ordenades.
+        for (index in 0 until quantitatsollicituds) {
+
+            // 9. Comprovar si es pot acceptar la sol·licitud.
+            if (importgastat + sollicituds[index] <= importdisponible) {
+
+                // 10. Actualitzar l'import gastat i el comptador.
+                importgastat += sollicituds[index]
+                sollicitudsacceptades++
+            }
+        }
+
+        // 11. Mostrar el nombre de sol·licituds acceptades.
+        println(sollicitudsacceptades)
     }
-
 }
