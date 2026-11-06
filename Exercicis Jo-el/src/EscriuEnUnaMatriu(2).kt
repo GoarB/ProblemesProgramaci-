@@ -30,7 +30,7 @@ fun main() {
 //1. Registrar la mida de la matriu.
     val numrows = scan.nextInt()
     val numcolumns = scan.nextInt()
-    var numeros = Array(numrows) { IntArray(numcolumns) }
+    val numeros = Array(numrows) { IntArray(numcolumns) }
 
 //2. Registrar el contingut de la matriu.
     for (i in 0 until numrows) {
