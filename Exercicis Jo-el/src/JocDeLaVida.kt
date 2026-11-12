@@ -22,8 +22,74 @@ Per cada cas de prova, caldrà respondre:
 Una línia per cada fila, amb l’estat de cada columna a la següent generació, representat de la manera ja explicada i
 havent aplicat les regles del “Joc de la Vida”.
 
-1. Registrar el nùmero de files i columnes del taulell.
-2.
-3.
-4.
- */
+1. Registrar la mida de la matriu.
+2. Crear la matriu original i la matriu resultant.
+3. Omplir la matriu amb les entrades de l'usuari.
+4. Recorrer cada casella i comptar les caselles veines vives.
+5. Aplicar les regles per determinar si la casella estara viva o morta.
+6. Mostrar la matriu resultant.
+*/
+
+import java.util.Scanner
+
+fun main() {
+
+    val scan = Scanner(System.`in`)
+
+//1. Registrar la mida de la matriu.
+    val numrows = scan.nextInt()
+    val numcolumns = scan.nextInt()
+
+//2. Crear la matriu original i la matriu resultant.
+    val numeros = Array(numrows) { IntArray(numcolumns) }
+    val resultat = Array(numrows) { IntArray(numcolumns) }
+
+//3. Omplir la matriu amb les entrades de l'usuari.
+    for (i in 0 until numrows) {
+        val linia = scan.next()
+
+        for (j in 0 until numcolumns) {
+            numeros[i][j] = linia[j].digitToInt()
+        }
+    }
+
+//4. Recorrer cada casella i comptar les caselles veines vives.
+    for (i in 0 until numrows) {
+        for (j in 0 until numcolumns) {
+
+            var veins = 0
+
+            for (f in -1..1) {
+                for (c in -1..1) {
+
+                    val fila = i + f
+                    val columna = j + c
+
+                    if (fila >= 0 && fila < numrows &&
+                        columna >= 0 && columna < numcolumns &&
+                        (f != 0 || c != 0)) {
+
+                        if (numeros[fila][columna] == 1) {
+                            veins++
+                        }
+                    }
+                }
+            }
+
+//5. Aplicar les regles per determinar si la casella estara viva o morta.
+            if (veins == 2 || veins == 3) {
+                resultat[i][j] = 1
+            } else {
+                resultat[i][j] = 0
+            }
+        }
+    }
+
+//6. Mostrar la matriu resultant.
+    for (i in resultat.indices) {
+        for (j in resultat[i].indices) {
+            print(resultat[i][j])
+        }
+        println()
+    }
+}
