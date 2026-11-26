@@ -1,4 +1,5 @@
 import java.util.Scanner
+
 /*
 Implementa una funció que calculi la mitjana dels elements d’un vector de
 floats que se li passa com a paràmetre. La funció haurà de tenir la següent
